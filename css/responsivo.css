@@ -1,0 +1,53 @@
+/* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+
+}
+
+/* // `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  /* GENERAL CONFIGURATION */
+  .containerW {padding: 0 40px;}
+
+}
+
+/* // `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  
+  /* HEADER */
+  #nav-header {justify-content: space-between;}
+
+  #nav-header .button-request {display: none; order: -1;}
+
+}
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  /* GENERAL CONFIGURATION */
+  .containerW {padding: 0 20px;}
+
+  /* HEADER */
+  #nav-menu {gap:15px;}
+
+  /* BENEFITS */
+  #benefits {text-align: center;}
+
+  /* FOOTER */
+  #footer-containers {
+    display: block;
+  }
+
+  #footer-div1 {justify-content: space-between;}
+
+  #footer-nav {width: fit-content; margin: 0;}
+
+  #footer-nav>div {padding: 0 30px;}
+
+  #footer-nav>div:last-of-type {padding-left: 0;}
+
+  #footer-div2 {text-align: center; padding-top: 50px;}
+}
+
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+}

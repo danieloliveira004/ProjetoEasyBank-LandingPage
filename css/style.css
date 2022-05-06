@@ -1,0 +1,248 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+/*  Weights: 300, 400, 700 */
+
+/* GENERAL CONFIGURATION  */
+html, body {overflow-x: hidden;}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.containerW {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
+
+p, span{
+  font-size: 16px;
+  color: hsl(233, 8%, 62%);
+}
+
+/* CONFIGURATIONS BOOTSTRAP */
+a {text-decoration: none;}
+
+ul {margin: 0;}
+
+nav, nav>* {box-sizing: initial;}
+
+/* BUTTONS */
+.button-request {
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(to right,hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  padding: 12px 35px;
+  border-radius: 40px;
+  transition: filter .5s;
+}
+
+.button-request:hover {filter: brightness(1.1); color: #ffffff;}
+
+/* HEADER */
+header {
+  background: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+#nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* NAV-MENU */
+#nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+#nav-menu a {
+  font-size: 16px;
+  color: #9698a6;
+  display: block;
+  padding: 30px 10px;
+  position: relative;
+  transition: .9s ease;
+}
+
+#nav-menu a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  max-width: 0;
+  height: 4px;
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all .8s ease-in-out;
+}
+
+#nav-menu a:hover {color: #4c4b51;}
+
+#nav-menu a:hover::after {
+  background: linear-gradient(to right,hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  max-width: 300px;
+}
+
+/* FRONT COVER */
+#front-cover {
+  padding: 150px 0;
+  position: relative;
+  background: #fafafa;
+}
+
+#front-cover h1 {
+  font-size: 2.5em;
+  color: #31304e;
+  padding-bottom: 10px;
+  white-space: nowrap;
+}
+
+#front-cover p {padding-bottom: 30px; padding-right: 50%;}
+
+.img-front-bg {
+  transform: scale(.9);
+  position: absolute;
+  height: 150%;
+  bottom: -15%;
+  left: 40%;
+}
+
+.img-front-mk {
+  transform: scale(.9);
+  position: absolute;
+  z-index: 2;
+  top: -40%;
+  left: 55%;
+}
+
+/* BENEFITS */
+#benefits {
+  background: #f4f5f7;
+  padding: 80px 0;
+}
+
+#benefits h2 {
+  color: #31304e;
+  padding-bottom: 10px;
+}
+
+#benefits p {padding-bottom: 40px;}
+
+#benefits h3 {
+  color: #31304e;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 25px 0;
+}
+
+/* LATEST ARTICLES */
+#latest-articles {
+  background: #fafafa;
+  padding: 80px 0;
+}
+
+#latest-articles h4 {
+  color: #31304e;
+  font-size: 1.8em;
+  padding-bottom: 30px;
+}
+
+#latest-articles img {
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* CARD */
+
+.cardL {
+  background: #ffffff;
+  padding: 30px;
+}
+
+.cardL span {
+  font-size: 10px; 
+  display: block;
+  margin-bottom: 10px;
+}
+
+.cardL a {
+  color: #31304e;
+  font-size: .9em;
+  display: block;
+  padding-bottom: 10px;
+  line-height: 1.2em;
+  transition: color .5s ease;
+}
+
+.cardL a:hover {color: #32dba3;}
+
+.cardL p {font-size: 12px; line-height: 18px;}
+
+/* FOOTER */
+footer {
+  background: #2d314e;
+  padding: 35px 0;
+}
+
+#footer-containers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* FOOTER DIVISÃO 1  PARTE 1*/
+#footer-div1 {display: flex; width: 100%;}
+
+#footer-div1 .logo {margin-bottom: 50px;}
+
+#footer-div1 div {white-space: nowrap;}
+
+#footer-div1>div a{padding: 5px;}
+
+#footer-div1>div a svg {fill: #ffffff; transition: .5s ease;}
+
+#footer-div1>div a:hover svg {fill: #32dba3;}
+
+/* FOOTER DIVISÃO 1 PARTE2*/
+#footer-nav {
+  margin-left: 15%;
+  width: 100%;
+  display: flex;
+}
+
+#footer-nav>div:last-of-type {
+  padding-left: 20%;
+}
+
+#footer-nav>div a {
+  display: block;
+  font-size: 16px;
+  color: #d6d9ea;
+  transition: .5s ease;
+}
+
+#footer-nav>div a:hover {color: #32dba3;}
+
+/* FOOTER DIVISÃO 2 */
+#footer-div2 {
+  width: 100%;
+  text-align: right;
+}
+
+#footer-div2 p{margin-top: 25px; margin-bottom: 0;}
+
+
+
+
