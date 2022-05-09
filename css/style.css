@@ -69,27 +69,25 @@ header {
   padding: 30px 10px;
   position: relative;
   transition: .9s ease;
+  overflow: hidden;
 }
 
 #nav-menu a::after {
   content: '';
   display: block;
-  width: 100%;
-  max-width: 0;
+  background: linear-gradient(to right,hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  width: 0;
   height: 4px;
-  background: transparent;
   position: absolute;
   bottom: 0;
-  left: 0;
-  transition: all .8s ease-in-out;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width .4s ease-in-out;
 }
 
 #nav-menu a:hover {color: #4c4b51;}
 
-#nav-menu a:hover::after {
-  background: linear-gradient(to right,hsl(136, 65%, 51%), hsl(192, 70%, 51%));
-  max-width: 300px;
-}
+#nav-menu a:hover::after {width: 110%;}
 
 /* FRONT COVER */
 #front-cover {
