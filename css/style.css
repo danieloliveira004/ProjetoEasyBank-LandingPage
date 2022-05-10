@@ -3,7 +3,7 @@
 /*  Weights: 300, 400, 700 */
 
 /* GENERAL CONFIGURATION  */
-html, body {overflow-x: hidden;}
+html, body {overflow-x: hidden; position: relative;}
 
 body {
   font-family: 'Public Sans', sans-serif;
@@ -50,9 +50,19 @@ header {
 }
 
 #nav-header {
+  min-height: 80px;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#icon-burger svg {
+  opacity: 0;
+  position: absolute;
+  right: 20px;
+  top: 35px;
+  transition: all .4s ease-in-out;
 }
 
 /* NAV-MENU */
@@ -82,12 +92,18 @@ header {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  transition: width .4s ease-in-out;
+  transition: width .3s ease-in-out;
 }
 
 #nav-menu a:hover {color: #4c4b51;}
 
 #nav-menu a:hover::after {width: 110%;}
+
+/* MENU RESPONSIVO */
+
+#nav-header.on nav {height: 90vh;}
+
+#nav-header.on #nav-menu {opacity: 1;} 
 
 /* FRONT COVER */
 #front-cover {

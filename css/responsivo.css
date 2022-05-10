@@ -16,7 +16,7 @@
   /* HEADER */
   #nav-header {justify-content: space-between;}
 
-  #nav-header .button-request {display: none; order: -1;}
+  #nav-header div:first-of-type{display: none;}
 
 }
 
@@ -26,10 +26,100 @@
   .containerW {padding: 0 20px;}
 
   /* HEADER */
-  #nav-menu {gap:15px;}
+  #icon-burger svg:first-of-type {opacity: 1;}
+
+  #icon-burger svg:last-of-type{transform: translate(-3px, -3px);}
+
+  #nav-header.on #icon-burger svg:first-of-type {opacity: 0;}
+
+  #nav-header.on #icon-burger svg:last-of-type {
+    opacity: 1;
+    display: block;
+  }
+
+  #nav-menu {display: none;}
+
+  /* FRONT COVER */
+  #front-cover {
+    padding: 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70vh 70vh;
+    justify-content: center;
+  }
+
+  #front-cover h1{padding-top:70px;}
+
+  #front-cover p {padding-right: 0; padding-top: 10px;}
+
+  #container-img-front {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+
+  .img-front-bg-mb {
+    width: 110%;
+    max-height: 540px;
+    position: absolute;
+    left: 0;
+    top: -6em;
+  }
+
+  .img-front-mk {
+    transform: scale(1);
+    left: auto;
+    top: -8em;
+    width: 100%;
+    max-width: 480px;
+  } 
+
+  /* MENU RESPONSIVO */
+  #nav-header nav {
+    position: absolute;
+    display: block;
+    height: 0;
+    transition: height .1s ease;
+    overflow: hidden;
+  }
+
+  #nav-header nav {
+    background: linear-gradient(to bottom, #2c334d, transparent);
+    left: 0;
+    right: 0;
+    height: 0;
+    top: 100%;
+    transition: all 2s;
+    overflow: hidden;
+  }
+
+  #nav-header #nav-menu {
+    display: block;
+    background: #ffffff;
+    padding: 10px 0;
+    width: calc(100% - 40px);
+    margin: 20px;
+    text-align: center;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+  } 
+
+  #nav-header #nav-menu a {
+    padding: 15px 0;
+    color: #363545;
+    font-weight: 600;
+  }
+  
+
 
   /* BENEFITS */
   #benefits {text-align: center;}
+
+  /* LATEST ARTICLES */
+  #latest-articles img {margin-top: 20px;}
 
   /* FOOTER */
   #footer-containers {
@@ -49,5 +139,34 @@
 
 /* // `sm` applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+  
+  /* FRONT COVER */
+  #front-cover {grid-template-rows: 60vh 70vh;}
 
+  .img-front-mk {
+    transform: scale(.9);
+  }
+
+  /* FOOTER */
+  footer {text-align: center;}
+
+  #footer-div1 .logo {margin-bottom: 30px;}
+
+  #footer-div1 {
+    flex-direction: column;
+    align-items: center;
+  } 
+
+  #footer-nav {
+    flex-direction: column;
+    padding: 30px 0;
+  }
+
+  #footer-nav>div {padding: 0;}
+
+  #footer-div2 {padding-top: 0;}
+}
+
+@media (max-width: 420px) {
+  #front-cover {grid-template-rows: 45vh 80vh;}
 }
